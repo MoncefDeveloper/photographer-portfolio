@@ -44,7 +44,7 @@
             <div class="out-menu">
                 <div class="contact" id="contact">
                     moncef.lakehal@outlook.com <br>
-                    Number: +213656711226
+                    Number: +213781401014
                 </div>
                 <div class="sociale" id="sociale">
                     <a class="img" href="#"><img loading="lazy" alt="img" src="images/instagram.png"></a>
