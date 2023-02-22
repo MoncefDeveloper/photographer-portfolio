@@ -33,7 +33,7 @@
         // -----------VARIABLES-------------------------
 
         if (isset($_POST["name"]) and $_POST["name"] != "") {
-            $name = filter_var($_POST["name"],  FILTER_FLAG_STRIP_HIGH);
+            $name = filter_var($_POST["name"],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         } else {
             $name = "No Name";
         }
@@ -57,7 +57,7 @@
         // -------------------------------------
 
         if (isset($_POST["adress"]) and $_POST["adress"] != "") {
-            $adress = filter_var($_POST["adress"],  FILTER_FLAG_STRIP_HIGH);
+            $adress = filter_var($_POST["adress"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         } else {
             $adress = "NO Adress";
         }
@@ -65,7 +65,7 @@
         // -------------------------------------
 
         if (isset($_POST["subject"]) and $_POST["subject"] != "") {
-            $subject = filter_var($_POST["subject"],  FILTER_FLAG_STRIP_HIGH);
+            $subject = filter_var($_POST["subject"],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         } else {
             $subject = "NO Subject";
         }
@@ -73,7 +73,7 @@
         // -------------------------------------
 
         if (isset($_POST["message"]) and $_POST["message"] != "") {
-            $message = filter_var($_POST["message"],  FILTER_FLAG_STRIP_HIGH);
+            $message = filter_var($_POST["message"],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
         } else {
             $message = "NO Message";
         }
@@ -99,15 +99,15 @@
         $stmt->execute();
 
         if ($stmt == true) {
-            header("location:". $GLOBALS["url"]."/contact.php");
+            header("location:" . $GLOBALS["url"] . "/contact.php");
         } else {
-            header("location:". $GLOBALS["url"]."/contact.php");
+            header("location:" . $GLOBALS["url"] . "/contact.php");
         }
     }
 
     ?>
     <div class="right-side">
-        <img loading="lazy" alt="img"  src="images/LM-image-3.webp">
+        <img loading="lazy" alt="img" src="images/LM-image-3.webp">
     </div>
 </div>
 
